@@ -1,0 +1,823 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="icon" type="image/gif" href="animated_favicon1.gif" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="stranica.css" media="screen" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <title>hanuma.ba</title>
+    <style>
+        /* Full-width input fields */
+        input[type=text], input[type=password] {
+            width: 80%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        /* Set a style for all buttons */
+        button {
+            background-color: #ac5f99;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        /* Extra styles for the cancel button */
+        .cancelbtn {
+            width: auto;
+            padding: 10px 18px;
+            background-color: #5c0f49;
+        }
+
+        /* Center the image and position the close button */
+        .imgcontainer {
+            text-align: center;
+            margin: 24px 0 12px 0;
+            position: relative;
+        }
+
+        img.avatar {
+            width: 20%;
+            border-radius: 50%;
+        }
+
+        .container {
+            padding: 16px;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            color: #444;
+        }
+
+        span.psw {
+            float: right;
+            padding-top: 16px;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            padding-top: 5%;
+        }
+
+        /* Modal Content/Box */
+        .modal-content {
+            background-color: #fefefe;
+            margin-right: 30%;
+            border-radius: 10px;
+            background-image: url(cvece.jpg);
+            border: 1px solid #888;
+            width: 40%; /* Could be more or less, depending on screen size */
+            box-shadow: 0 0 20px 0 #000000;
+        }
+
+        /* The Close Button (x) */
+        .close {
+            position: absolute;
+            right: 25px;
+            top: 0;
+            color: #000;
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+            .close:hover,
+            .close:focus {
+                color: #ac5f99;
+                cursor: pointer;
+            }
+
+        /* Add Zoom Animation */
+        .animate {
+            -webkit-animation: animatezoom 0.6s;
+            animation: animatezoom 0.6s;
+        }
+
+        @-webkit-keyframes animatezoom {
+            from {
+                -webkit-transform: scale(0);
+            }
+
+            to {
+                -webkit-transform: scale(1);
+            }
+        }
+
+        @keyframes animatezoom {
+            from {
+                transform: scale(0);
+            }
+
+            to {
+                transform: scale(1);
+            }
+        }
+
+        /* Change styles for span and cancel button on extra small screens */
+        @media screen and (max-width: 300px) {
+            span.psw {
+                display: block;
+                float: none;
+            }
+
+            .cancelbtn {
+                width: 100%;
+            }
+        }
+
+
+/*tabela...*/
+th{	
+    padding: 2%;
+    background-color: rgba(117, 16, 92, 0.3);
+}
+
+td{
+    padding: 5px;
+}
+table {
+    width: 50%;
+    font-family: Candara;
+    font-size: 20px;
+	color: #330033;
+    float:left;
+    margin-left: 6%;
+    margin-right: 7%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border-spacing: 25px;
+    background-color: rgba(202, 76, 194, 0.3);
+    text-shadow:1px 1px 1px #888;
+}
+
+/*Otvaranje slike u modulu...*/
+
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+#myImg1 {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#myImg1:hover {opacity: 0.7;}
+
+#myImg2 {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#myImg2:hover {opacity: 0.7;}
+
+#myImg3 {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#myImg3:hover {opacity: 0.7;}
+
+#myImg4 {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#myImg4:hover {opacity: 0.7;}
+
+#myImg5 {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#myImg5:hover {opacity: 0.7;}
+
+#myImg6 {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#myImg6:hover {opacity: 0.7;}
+
+#myImg7 {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#myImg7:hover {opacity: 0.7;}
+
+#myImg8 {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#myImg8:hover {opacity: 0.7;}
+
+#myImg9 {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#myImg9:hover {opacity: 0.7;}
+
+
+/* The Modal (background) */
+.modall {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modall-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation */
+.modall-content, #caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)}
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.closee {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.closee:hover,
+.closee:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modall-content {
+        width: 100%;
+    }
+}
+
+.slika{
+     width:150px;
+     height: 110px;
+     float: left;
+     margin-left:4.3%;
+     margin-top: 1%;
+     margin-right: 1%;
+     margin-bottom:1%;
+}
+</style>
+
+    <div>
+
+        <p class="logo"> <img src="logo2.png" width="550px" height="200px" align="left" /></p>
+
+        <form>
+            <input id="search" type="search" name="search" />
+            <p></p>
+        </form>
+
+        <div style="margin:1%; float:right;">
+            <a href="https://www.facebook.com/hanumaba-204504216658447/?skip_nax_wizard=true"
+               target="_blank" title="Instagram">
+                <img src="inst.png" alt="Instagram" />
+            </a>
+        </div>
+
+        <div style="margin:1%; float:right;">
+            <a href="https://www.facebook.com/hanumaba-204504216658447/?skip_nax_wizard=true"
+               target="_blank" title="Facebook">
+                <img src="fb.png" alt="Facebook" />
+            </a>
+        </div>
+
+        <div style="margin:1%; float:right;">
+
+            <img src="rcheck.png" alt="Prijava" title="Prijava" onclick="document.getElementById('id01').style.display='block'" style="width:auto;" /></img>
+
+            <div id="id01" class="modal">
+
+                <form class="modal-content animate" action="action_page.php">
+                    <div class="imgcontainer">
+                        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Zatvorite prozor">&times;</span>
+                        <img src="check.png" alt="Avatar" class="avatar" />
+                    </div>
+
+                    <div class="container">
+                        <label><b>Username</b></label>
+                        <input type="text" placeholder="Unesite Username" name="uname" required=required />
+
+                        <label><b>Password</b></label>
+                        <input type="password" placeholder="Unesite Password" name="psw" required=required />
+
+                        <button type="submit">Prijava</button>
+                        <input type="checkbox" checked="checked" /> Zapamti me
+                    </div>
+
+                    <div class="container" style="background-color:#f1f1f1">
+                        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Odustani</button>
+                        <span class="psw">Zaboravili ste <a href="#">password?</a></span>
+                    </div>
+                </form>
+
+            </div>
+
+            <script>
+                // Get the modal
+                var modal = document.getElementById('id01');
+
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function (event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                }
+            </script>
+        </div>
+        <div style="margin:1%; float:right;">
+            <img src="radd.png" alt="Registracija" title="Registracija" onclick="document.getElementById('hiddenForm').style.display = 'block'" style="width:auto;" /></img>
+            <form action="#" id="hiddenForm" style="display: none;">
+
+                <div class="main">
+                    <div class="one">
+                        <div id="hiddenForm" class="register"
+                             style="-webkit-animation: animatezoom 0.6s; -webkit-transform: scale(0); -webkit-transform: scale(1);
+                                    animation: animatezoom 0.6s; transform: scale(0); transform: scale(1);">
+                                <div class="imgcontainer">
+                                    <div class="imgcontainer">
+                                        <span onclick="document.getElementById('hiddenForm').style.display='none'" class="close" title="Zatvorite prozor">&times;</span>
+                                        <img src="add.png" alt="Avatar" class="avatar" />
+                                        <h3>Napravite svoj account</h3>
+
+                                        <form id="reg-form">
+                                            <div>
+                                                <label for="name"><b>Ime &#160; &#160; &#160; &#160; &#160;</label>
+                                                <input type="text" id="name" spellcheck="false" placeholder="Ime" />
+                                            </div>
+                                            <div>
+                                                <label for="email">Email &#160; &#160; &#160;</label>
+                                                <input type="text" id="email" spellcheck="false" placeholder="ime@example.com" />
+                                            </div>
+                                            <div>
+                                                <label for="username">Username</label>
+                                                <input type="text" id="username" spellcheck="false" placeholder="Username" />
+                                            </div>
+                                            <div>
+                                                <label for="password">Password</label>
+                                                <input type="password" id="password" placeholder="Password"/>
+                                            </div>
+                                            <div>
+                                                <label for="password-again">Password</label></b>
+                                                <input type="password" id="password-again" placeholder="Password" />
+                                            </div>
+
+
+                                            <!-- Button -->
+                                            <div class="control-group">
+                                                <label class="control-label" for="singlebutton"></label>
+                                                <div class="controls">
+                                                    <button id="singlebutton" name="singlebutton" class="btn btn-success">Napravi acount</button>
+                                                </div>
+                                            </div>
+
+                                        </form>
+
+                                    </div>
+                               </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div>
+            </div>
+        </div>
+
+
+        <div style="margin:1%; float:right;">
+            <a href="#" class="btn btn-info btn-lg">
+                <span class="glyphicon glyphicon-log-out"></span>
+                <img src="logout.png" alt="Odjava" title="Odjava" />
+            </a>
+        </div>
+
+        <div style="margin:1%; float:right;">
+            <a href="stranica.html"
+               title="Početna">
+                <img src="home.png" alt="Početna" />
+            </a>
+        </div>
+
+    </div>
+
+    <div class="scrollingtext">
+        
+        <marquee behavior="scroll" direction="left"> <b> Visina kulture određuje se po odnosu prema ženi. &#160; &#160; / &#160; &#160; She believed, she could, so she did. &#160; &#160; / &#160; &#160; A smile is the most beautiful curve on a womans body. &#160; &#160; /  &#160; &#160; A woman with a voice is, by definition, a strong woman. </b> </marquee>
+    </div>
+
+    <div style="background-color:#393838; color:white; padding:0px; text-align:center; font-size:25px; margin-left:4%; margin-right:4%;">
+        <h2>Aida</h2>
+    </div>
+
+
+</head>
+
+
+<body background="pozadina.jpg">
+    <div style="margin-bottom:3%;
+        margin-top: 2%;
+        margin-left:9%;
+        float: left;
+        width:80%;
+        height:900%;
+        padding:5px;">
+        <table>
+            <b>
+                <tr>
+                    <th>Ime</th>
+                    <td>
+                        Aida</th>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        Adresa</td>
+                    </th>
+                    <td>Šehitluci 11</td>
+                </tr>
+                <tr>
+                    <th>
+                        Telefon</td>
+                    </th>
+                    <td>+387 60 31 48 870</td>
+                </tr>
+                <tr>
+                    <th>
+                        Radno vrijeme</td>
+                    </th>
+                    <td> 10:00 – 20:00 </td>
+                </tr>
+                <tr>
+                    <th>
+                        Stranice</td>
+                    </th>
+                    <td>
+                        <a style="margin-right:0%;" href="https://www.facebook.com/Frizerski-salon-Aida-Hrasnica-800732276683924/" target="_blank" title="Facebook">
+                            <img src="fb.png" alt="Facebook" />
+                        </a>
+                        
+                    </td>
+                </tr>
+            </b>
+        </table>
+
+        <div id="map"></div>
+        <script>
+            function pinSymbol(color) {
+                return {
+                    path: 'M 0,0 C -2,-20 -10,-22 -10,-30 A 10,10 0 1,1 10,-30 C 10,-22 2,-20 0,0 z M -2,-30 a 2,2 0 1,1 4,0 2,2 0 1,1 -4,0',
+                    fillColor: color,
+                    fillOpacity: 1,
+                    strokeColor: '#000',
+                    strokeWeight: 2,
+                    scale: 1,
+                };
+            }
+            function initMap() {
+                var uluru = { lat: 43.794486, lng: 18.320687 };
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 15,
+                    center: uluru
+                });
+                var marker = new google.maps.Marker({
+                    position: uluru,
+                    map: map,
+                    icon: pinSymbol("#5c0f49"),
+                });
+            }
+        </script>
+        <script 
+                src="https://maps.googleapis.com/maps/api/js?&callback=initMap">
+        </script>
+
+        <br /><br /> <br />
+        <div style="background-color:#393838; color:white; padding:0px; text-align:center; font-size:25px; margin-left:4%; margin-right:4%;">
+            <h2>GALERIJA</h2>
+        </div>
+        <br />
+
+        <img class="slika" id="myImg" src="A1.jpg" alt="Aida" />
+
+        <!-- The Modal -->
+        <div id="myModal" class="modall">
+            <span class="closee">×</span>
+            <img class="modall-content" id="img01" />
+            <div id="caption"></div>
+        </div>
+
+        <script>
+// Get the modal
+var modall = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modall.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("closee")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modall.style.display = "none";
+}
+        </script>
+
+        <img class="slika" id="myImg1" src="A2.jpg" alt="Aida" />
+
+        <!-- The Modal -->
+        <div id="myModal" class="modall">
+            <span class="closee">×</span>
+            <img class="modall-content" id="img01" />
+            <div id="caption"></div>
+        </div>
+
+        <script>
+// Get the modal
+var modall = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg1');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modall.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("closee")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modall.style.display = "none";
+}
+        </script>
+
+        <img class="slika" id="myImg2" src="A3.jpg" alt="Aida" />
+
+        <!-- The Modal -->
+        <div id="myModal" class="modall">
+            <span class="closee">×</span>
+            <img class="modall-content" id="img01" />
+            <div id="caption"></div>
+        </div>
+
+        <script>
+// Get the modal
+var modall = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg2');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modall.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("closee")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modall.style.display = "none";
+}
+        </script>
+
+
+        <img class="slika" id="myImg3" src="A4.jpg" alt="Aida" />
+
+        <!-- The Modal -->
+        <div id="myModal" class="modall">
+            <span class="closee">×</span>
+            <img class="modall-content" id="img01" />
+            <div id="caption"></div>
+        </div>
+
+        <script>
+// Get the modal
+var modall = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg3');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modall.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("closee")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modall.style.display = "none";
+}
+        </script>
+
+        <img class="slika" id="myImg4" src="A5.jpg" alt="Aida" />
+
+        <!-- The Modal -->
+        <div id="myModal" class="modall">
+            <span class="closee">×</span>
+            <img class="modall-content" id="img01" />
+            <div id="caption"></div>
+        </div>
+
+        <script>
+// Get the modal
+var modall = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg4');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modall.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("closee")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modall.style.display = "none";
+}
+        </script>
+
+        <img class="slika" id="myImg5" src="A6.jpg" alt="Aida" />
+
+        <!-- The Modal -->
+        <div id="myModal" class="modall">
+            <span class="closee">×</span>
+            <img class="modall-content" id="img01" />
+            <div id="caption"></div>
+        </div>
+
+        <script>
+// Get the modal
+var modall = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg5');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modall.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("closee")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modall.style.display = "none";
+}
+        </script>
+
+        <img class="slika" id="myImg6" src="A7.jpg" alt="Aida" />
+
+        <!-- The Modal -->
+        <div id="myModal" class="modall">
+            <span class="closee">×</span>
+            <img class="modall-content" id="img01" />
+            <div id="caption"></div>
+        </div>
+
+        <script>
+// Get the modal
+var modall = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg6');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modall.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("closee")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modall.style.display = "none";
+}
+        </script>
+
+</div>
+
+        <div align="center" id="footer">
+            <ul>
+                <li><a href="stranica.html"><b>Početna</a>  | </li>
+                <li><a href="onama.html"> O nama</a> | </li>
+                <li><a href="dokumentacija.html"> Dokumentacija </a>| </li>
+                <li><a href="kontakt.html"> Kontakt </a></li></b>
+            </ul>
+
+        </div>
+
+        <br /> <br />
+        <div style="text-align: center; color: black; font-size: 18px; text-shadow:2px 1px 1px #888;">
+            Copyright © Meliha Kurtagić, Aiša Gadžo <br /> Sva prava zadržana.
+        </div>
+</body>
+</html>
